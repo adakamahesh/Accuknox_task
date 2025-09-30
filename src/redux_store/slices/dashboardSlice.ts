@@ -47,20 +47,20 @@ const initialState: Category[] = [
                 id: "w-chart-1",
                 name: "Image Risk Assessment",
                 chartData: [
-                    { label: "Failed", value: 1689, color: "#8b1010ff" },
-                    { label: "Warning", value: 681, color: "#dce62bff" },
-                    { label: "Not available", value: 206, color: "#87887dff" },
-                    { label: "Passed", value: 7253, color: "#1ce670ff" },
+                    { label: "Critcal", value: 9, color: "#3f0e0eff" },
+                    { label: "High", value: 150, color: "#8d2036ff" },
+                    { label: "Low", value: 20, color: "#87887dff" },
+                    { label: "Emegency", value: 72, color: "#1ce670ff" },
                 ],
             },
             {
                 id: "w-chart-2",
                 name: "Image Security Issues",
                 chartData: [
-                    { label: "Failed", value: 169, color: "#8b1010ff" },
-                    { label: "Warning", value: 681, color: "#dce62bff" },
-                    { label: "Not available", value: 206, color: "#87887dff" },
-                    { label: "Passed", value: 723, color: "#1ce670ff" },
+                    { label: "Critcal", value: 2, color: "#3f0e0eff" },
+                    { label: "High", value: 2, color: "#8d2036ff" },
+                    { label: "Low", value: 2, color: "#87887dff" },
+                    { label: "Emegency", value: 1, color: "#1ce670ff" },
                 ],
             },
         ]

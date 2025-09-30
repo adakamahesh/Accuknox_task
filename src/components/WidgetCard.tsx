@@ -1,10 +1,10 @@
 import React from "react";
 import { Widget } from "../types/widgets";
 import CloudAccountsDashboard from "./widgets/CloudAccountsDashboard";
-import { IconButton } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 import StackedBar from "./widgets/StackedBar";
 import BarGraph from "./widgets/BarGraph";
+import { Box, IconButton, Typography } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 
 interface WidgetCardProps {
   widget: Widget;
@@ -30,17 +30,21 @@ const WidgetCard: React.FC<WidgetCardProps> = ({
   };
 
   return (
-    <div
-      className="bg-white rounded p-4 w-full h-100"
+    <Box
+      position="relative"
+      bgcolor="white"
+      borderRadius={2}
+      p={2}
+      width="100%"
+      height="100%"
     >
       {onRemove && (
         <IconButton
           size="small"
           onClick={() => onRemove(widget.id)}
-          style={{
+          sx={{
             position: "absolute",
-            top: "4px",
-            right: "4px",
+            right: 4,
             color: "black",
           }}
         >
@@ -48,12 +52,16 @@ const WidgetCard: React.FC<WidgetCardProps> = ({
         </IconButton>
       )}
 
-      <h3 className="font-semibold mb-2" style={{ fontSize: "18px" }}>
+      <Typography
+        variant="subtitle1"
+        fontWeight="550"
+        sx={{ fontSize: 18 }}
+      >
         {widget.name}
-      </h3>
+      </Typography>
 
       {getGraphByGraphType(widget.chartData)}
-    </div>
+    </Box>
   );
 };
 

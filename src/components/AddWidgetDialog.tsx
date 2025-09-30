@@ -16,12 +16,7 @@ import {
 import { Delete } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
 import { AppDispatch, addWidget } from "../store";
-
-interface ChartDataItem {
-    label: string;
-    value: number;
-    color: string;
-}
+import { ChartDataItem } from "../types/AddWidgetDialogTypes";
 
 interface AddWidgetDialogProps {
     open: boolean;
