@@ -86,7 +86,7 @@ export const dashboardSlice = createSlice({
             if (cat) {
                 cat.widgets = cat.widgets.filter((w) => w.id !== action.payload.widgetId);
             }
-        },       
+        },
     },
 });
 

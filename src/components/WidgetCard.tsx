@@ -34,32 +34,24 @@ const WidgetCard: React.FC<WidgetCardProps> = ({
       position="relative"
       bgcolor="white"
       borderRadius={2}
-      p={2}
+      p={1}
       width="100%"
       height="100%"
     >
-      {onRemove && (
-        <IconButton
-          size="small"
-          onClick={() => onRemove(widget.id)}
-          sx={{
-            position: "absolute",
-            right: 4,
-            color: "black",
-          }}
-        >
-          <CloseIcon fontSize="small" />
-        </IconButton>
-      )}
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <Typography fontSize="14px" fontWeight="bold">
+          {widget.name}
+        </Typography>
 
-      <Typography
-        variant="subtitle1"
-        fontWeight="550"
-        sx={{ fontSize: 18 }}
-      >
-        {widget.name}
-      </Typography>
-
+        {onRemove && (
+          <IconButton
+            size="small"
+            onClick={() => onRemove(widget.id)}
+          >
+            <CloseIcon fontSize="small" />
+          </IconButton>
+        )}
+      </Box>
       {getGraphByGraphType(widget.chartData)}
     </Box>
   );

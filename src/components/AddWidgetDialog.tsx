@@ -22,7 +22,7 @@ interface AddWidgetDialogProps {
     open: boolean;
     onClose: () => void;
     categories: any[];
-    clickedCategoryId?: string; 
+    clickedCategoryId?: string;
     onWidgetAdded?: (id: string) => void;
 }
 
@@ -80,9 +80,9 @@ export default function AddWidgetDialog({
             prev.map((item, i) =>
                 i === index
                     ? {
-                          ...item,
-                          [field]: field === "value" ? Number(value) : value,
-                      }
+                        ...item,
+                        [field]: field === "value" ? Number(value) : value,
+                    }
                     : item
             )
         );

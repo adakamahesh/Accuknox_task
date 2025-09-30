@@ -11,7 +11,7 @@ const StackedBar: React.FC<StackedBarProps> = ({ data, height = 20 }) => {
     const total = data.reduce((sum, item) => sum + item.value, 0);
 
     return (
-        <Box marginTop='2rem'>
+        <Box marginTop='22px'>
             {/* Stacked Bar Chart */}
             <Box
                 display="flex"
@@ -67,7 +67,7 @@ const StackedBar: React.FC<StackedBarProps> = ({ data, height = 20 }) => {
                             }}
                         />
                         <Box fontSize={14} color="#333">
-                            {item.label} <Box component="span" fontWeight="bold">({item.value})</Box>
+                            {item.label} <Box component="span"  >({item.value})</Box>
                         </Box>
                     </Box>
                 ))}

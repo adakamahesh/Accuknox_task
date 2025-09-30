@@ -54,9 +54,8 @@ export default function Dashboard() {
 
     return (
         <Box p={3} bgcolor="#f0f4ff">
-            <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
-                <Typography variant="h4">CNAPP Dashboard</Typography>
-
+            <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+                <Typography fontSize="18px" fontWeight="bold">CNAPP Dashboard</Typography>
                 <Box display="flex" gap={2}>
                     <TextField
                         size="small"
@@ -73,9 +72,8 @@ export default function Dashboard() {
             </Box>
 
             {categories.map((cat: Category) => (
-                <Box key={cat.id} mb={4}>
-                    <Typography variant="h6" mb={1}>{cat.name}</Typography>
-
+                <Box key={cat.id} mb={2}>
+                    <Typography fontSize="16px" fontWeight="bold" marginLeft="5px">{cat.name}</Typography>
                     <Box display="flex" gap={2}>
                         {/* Widgets scroll container */}
                         <Box
@@ -98,7 +96,7 @@ export default function Dashboard() {
                                     data-widget-id={w.id}
                                     flex="0 0 50%"
                                     maxWidth="49%"
-                                    height={"240px"}
+                                    height={"205px"}
                                 >
                                     <WidgetCard
                                         widget={w}
@@ -116,7 +114,7 @@ export default function Dashboard() {
                             sx={{
                                 width: "33%",
                                 minWidth: 200,
-                                height: 240,
+                                height: 205,
                                 mt: 0.75, // 6px => theme.spacing(0.75)
                                 display: "flex",
                                 alignItems: "center",
