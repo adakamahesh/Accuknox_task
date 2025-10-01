@@ -54,7 +54,7 @@ export default function Dashboard() {
 
     return (
         <Box p={3} bgcolor="#f0f4ff">
-            <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+            <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                 <Typography fontSize="18px" fontWeight="bold">CNAPP Dashboard</Typography>
                 <Box display="flex" gap={2}>
                     <TextField
@@ -73,7 +73,7 @@ export default function Dashboard() {
 
             {categories.map((cat: Category) => (
                 <Box key={cat.id} mb={2}>
-                    <Typography fontSize="16px" fontWeight="bold" marginLeft="5px">{cat.name}</Typography>
+                    <Typography fontSize="14px" fontWeight="bold" marginLeft="5px">{cat.name}</Typography>
                     <Box display="flex" gap={2}>
                         {/* Widgets scroll container */}
                         <Box
@@ -86,7 +86,7 @@ export default function Dashboard() {
                                 overflowX: "auto",
                                 alignItems: "center",
                                 gap: 2,        // theme.spacing(2) = 16px
-                                p: 1,          // theme.spacing(1) = 8px
+                                p: "3px",          // theme.spacing(1) = 8px
                                 whiteSpace: "nowrap",
                             }}
                         >
@@ -96,7 +96,7 @@ export default function Dashboard() {
                                     data-widget-id={w.id}
                                     flex="0 0 50%"
                                     maxWidth="49%"
-                                    height={"205px"}
+                                    height={"180px"}
                                 >
                                     <WidgetCard
                                         widget={w}
@@ -114,7 +114,7 @@ export default function Dashboard() {
                             sx={{
                                 width: "33%",
                                 minWidth: 200,
-                                height: 205,
+                                height: 180,
                                 mt: 0.75, // 6px => theme.spacing(0.75)
                                 display: "flex",
                                 alignItems: "center",

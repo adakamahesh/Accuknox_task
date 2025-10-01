@@ -16,7 +16,6 @@ const BarGraph: React.FC<BarGraphProps> = ({ data, height = 30 }) => {
                 flexDirection="column"
                 alignItems="center"
                 justifyContent="center"
-                height={150} // height of the empty graph area
                 width="100%"
                 gap={1}
             >

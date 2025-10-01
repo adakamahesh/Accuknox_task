@@ -16,7 +16,7 @@ const CloudAccountsDashboard: React.FC<CloudAccountsDashboardProps> = ({ data })
     let offset = 0;
 
     return (
-        <Box display="flex" alignItems="center" gap="3rem" marginTop="1rem" >
+        <Box display="flex" alignItems="center" gap="3rem" marginTop="2px" >
             {/* Donut Chart */}
             <Box sx={{ position: "relative", width: 120, height: 120 }}>
                 <svg width={120} height={120}>
@@ -66,10 +66,10 @@ const CloudAccountsDashboard: React.FC<CloudAccountsDashboardProps> = ({ data })
                         textAlign: "center",
                     }}
                 >
-                    <Typography variant="h6" fontWeight="bold" color="text.primary" lineHeight={1.2}>
+                    <Typography variant="h6" fontWeight="bold" color="text.primary" lineHeight={0.5}>
                         {total}
                     </Typography>
-                    <Typography variant="caption" color="text.secondary" lineHeight={1.2}>
+                    <Typography variant="caption" color="text.secondary" lineHeight={0.5}>
                         Total
                     </Typography>
                 </Box>
